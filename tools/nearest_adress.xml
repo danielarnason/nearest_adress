@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool type="label">
+    <tooltip>Nærmeste adresse på sidste klik i kortet</tooltip>
+    <requires>
+        <file name="/modules/nearest_adress/js/nearest_adress.js" priority="1" type="script" charset="utf-8"/>
+    </requires>
+    <src><![CDATA[
+        const nearestAdress = new NearestAdress()
+        nearestAdress.olMap.on('pointerdown', evt => {
+            nearestAdress.fetchDawaData(evt.coordinate[0], evt.coordinate[1])
+        })
+    ]]></src>
+</tool>
