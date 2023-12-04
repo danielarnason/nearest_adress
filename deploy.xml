@@ -4,8 +4,5 @@
     <lastupdated>4.4.0</lastupdated>
     <description>Modul som tilføjer en label med den nærmeste adresse ved musemarkøren</description>
 
-    <!-- Delay før den spørger efter adresse -->
-    <param name="module.nearest_adress.delay">1000</param>
-
     <copydir fromdir="[module:nearest_adress.dir]/js" todir="[cbinfo.wwwroot.dir]/modules/nearest_adress/js" />    
 </deploy>
