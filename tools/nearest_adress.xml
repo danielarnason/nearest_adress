@@ -9,5 +9,11 @@
         nearestAdress.olMap.on('pointerdown', evt => {
             nearestAdress.fetchDawaData(evt.coordinate[0], evt.coordinate[1])
         })
+        nearestAdress.adressElement.addEventListener('click', (evt) => {
+            let geom = new ol.geom.Point([nearestAdress.currentAdresse.x, nearestAdress.currentAdresse.y])            
+            nearestAdress.olMap.getView().fit(geom, {
+                maxZoom: 13
+            })
+        })
     ]]></src>
 </tool>

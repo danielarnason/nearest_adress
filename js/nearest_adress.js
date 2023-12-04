@@ -3,6 +3,7 @@ class NearestAdress {
         this.olMap = spm.getMapControl().map
         this.fetchingData = false
         this.adressElement = document.querySelector('#nearest_adress > a > span')
+        this.currentAdresse = null
     }
 
     async fetchDawaData(x, y) {
@@ -11,6 +12,7 @@ class NearestAdress {
         let response = await data.json()
         this.fetchingData = !this.fetchingData
         this.adressElement.innerHTML = response.betegnelse
+        this.currentAdresse = response
         return response.betegnelse
     }
 }
